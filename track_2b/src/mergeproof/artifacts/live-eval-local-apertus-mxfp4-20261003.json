@@ -1,0 +1,171 @@
+{
+  "schema": "mergeproof.live_eval.v2",
+  "generated_at": "2026-10-03T02:37:11.304Z",
+  "runtime": {
+    "endpoint_class": "local-loopback",
+    "model": "m1rkocasu/Apertus-v1.5-8B-text-MLX-mxfp4",
+    "thinking_enabled": false
+  },
+  "pr": {
+    "url": "https://github.com/risa-labs-inc/BossConsole/pull/1681",
+    "merged": true,
+    "merged_at": "2026-09-25T06:11:47Z",
+    "changed_files": 2,
+    "linked_issue_count": 1,
+    "release_match_count": 1
+  },
+  "invariant": {
+    "expected_status": "MERGED",
+    "all_languages_status_stable": true,
+    "all_claims_have_refs": true,
+    "all_narratives_have_refs": true
+  },
+  "runs": [
+    {
+      "language": "English",
+      "mode": "apertus",
+      "model": "m1rkocasu/Apertus-v1.5-8B-text-MLX-mxfp4",
+      "format_repair": false,
+      "duration_ms": 17498,
+      "status": "MERGED",
+      "claim_count": 1,
+      "unsupported_claims_after_sanitizer": 0,
+      "invalid_evidence_refs": [],
+      "unsupported_narratives_after_sanitizer": [],
+      "grounding": {
+        "input_claims": 1,
+        "accepted_claims": 1,
+        "rejected_claims": 0,
+        "technical_summary_grounded": true,
+        "portfolio_statement_grounded": true
+      },
+      "evidence_refs": [
+        [
+          "pr.merged",
+          "release_matches[0]"
+        ]
+      ],
+      "narrative_refs": {
+        "technical_summary": [
+          "pr.merged",
+          "files[0]",
+          "files[1]",
+          "linked_issues[0]",
+          "release_matches[0]"
+        ],
+        "portfolio_statement": [
+          "pr.title"
+        ]
+      }
+    },
+    {
+      "language": "German",
+      "mode": "apertus",
+      "model": "m1rkocasu/Apertus-v1.5-8B-text-MLX-mxfp4",
+      "format_repair": false,
+      "duration_ms": 13373,
+      "status": "MERGED",
+      "claim_count": 1,
+      "unsupported_claims_after_sanitizer": 0,
+      "invalid_evidence_refs": [],
+      "unsupported_narratives_after_sanitizer": [],
+      "grounding": {
+        "input_claims": 1,
+        "accepted_claims": 1,
+        "rejected_claims": 0,
+        "technical_summary_grounded": true,
+        "portfolio_statement_grounded": true
+      },
+      "evidence_refs": [
+        [
+          "pr.merged",
+          "release_matches[0]"
+        ]
+      ],
+      "narrative_refs": {
+        "technical_summary": [
+          "pr.title",
+          "files[0]",
+          "files[1]",
+          "linked_issues[0]"
+        ],
+        "portfolio_statement": [
+          "pr.title"
+        ]
+      }
+    },
+    {
+      "language": "French",
+      "mode": "apertus",
+      "model": "m1rkocasu/Apertus-v1.5-8B-text-MLX-mxfp4",
+      "format_repair": false,
+      "duration_ms": 12807,
+      "status": "MERGED",
+      "claim_count": 1,
+      "unsupported_claims_after_sanitizer": 0,
+      "invalid_evidence_refs": [],
+      "unsupported_narratives_after_sanitizer": [],
+      "grounding": {
+        "input_claims": 1,
+        "accepted_claims": 1,
+        "rejected_claims": 0,
+        "technical_summary_grounded": true,
+        "portfolio_statement_grounded": true
+      },
+      "evidence_refs": [
+        [
+          "release_matches[0]"
+        ]
+      ],
+      "narrative_refs": {
+        "technical_summary": [
+          "pr.title",
+          "files[0]",
+          "linked_issues[0]"
+        ],
+        "portfolio_statement": [
+          "pr.title"
+        ]
+      }
+    },
+    {
+      "language": "Russian",
+      "mode": "apertus",
+      "model": "m1rkocasu/Apertus-v1.5-8B-text-MLX-mxfp4",
+      "format_repair": false,
+      "duration_ms": 20286,
+      "status": "MERGED",
+      "claim_count": 1,
+      "unsupported_claims_after_sanitizer": 0,
+      "invalid_evidence_refs": [],
+      "unsupported_narratives_after_sanitizer": [],
+      "grounding": {
+        "input_claims": 1,
+        "accepted_claims": 1,
+        "rejected_claims": 0,
+        "technical_summary_grounded": true,
+        "portfolio_statement_grounded": true
+      },
+      "evidence_refs": [
+        [
+          "pr.merged",
+          "release_matches[0]"
+        ]
+      ],
+      "narrative_refs": {
+        "technical_summary": [
+          "pr.merged",
+          "files[0]",
+          "files[1]",
+          "release_matches[0]",
+          "linked_issues[0]"
+        ],
+        "portfolio_statement": [
+          "pr.title",
+          "pr.merged_at",
+          "release_matches[0]"
+        ]
+      }
+    }
+  ]
+}

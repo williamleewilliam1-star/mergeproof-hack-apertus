@@ -1,0 +1,35 @@
+name: Submission CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-and-container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Node tests
+        working-directory: track_2b/src/mergeproof
+        run: npm test
+      - name: Build submission container
+        working-directory: track_2b
+        run: docker build -t mergeproof-hack-apertus .
+      - name: Smoke test container
+        run: |
+          docker run -d --rm --name mergeproof-smoke -p 8789:8789 mergeproof-hack-apertus
+          trap 'docker stop mergeproof-smoke >/dev/null 2>&1 || true' EXIT
+          for i in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:8789/api/analyze >/tmp/health.json; then break; fi
+            sleep 1
+          done
+          python3 - <<'PY'
+          import json
+          data=json.load(open('/tmp/health.json'))
+          assert data["ok"] is True
+          assert data["service"] == "MergeProof"
+          print(data)
+          PY

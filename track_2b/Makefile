@@ -1,6 +1,20 @@
-.PHONY: run
+.PHONY: run build test
 
-# Replace with the command that starts the project in a Docker container,
-# e.g. `docker compose up`. It must work from a clean checkout.
-run:
-	@echo "make run is not implemented yet — edit this Makefile"; exit 1
+IMAGE ?= mergeproof-hack-apertus
+PORT ?= 8789
+LLM_NAME ?= swiss-ai/Apertus-v1.5-8B
+LLM_BASE_URL ?=
+LLM_API_KEY ?=
+
+build:
+	docker build -t $(IMAGE) .
+
+test:
+	cd src/mergeproof && npm test
+
+run: build
+	docker run --rm -p $(PORT):8789 \
+		-e LLM_NAME="$(LLM_NAME)" \
+		-e LLM_BASE_URL="$(LLM_BASE_URL)" \
+		-e LLM_API_KEY="$(LLM_API_KEY)" \
+		$(IMAGE)

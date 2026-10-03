@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MergeProof — Apertus-powered contribution evidence</title>
+  <meta name="description" content="Turn a public merged PR into an evidence-linked contributor dossier." />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="eyebrow">HACK APERTUS 2026 · OWN PROJECT</div>
+      <h1>MergeProof</h1>
+      <p>Evidence-first contributor dossiers for open source. GitHub provides the facts; Apertus explains them without losing the proof.</p>
+    </header>
+
+    <section class="panel">
+      <form id="form">
+        <label>GitHub pull request
+          <input id="url" value="https://github.com/risa-labs-inc/BossConsole/pull/1681" />
+        </label>
+        <label>Output language
+          <select id="language">
+            <option>English</option>
+            <option>Russian</option>
+            <option>German</option>
+            <option>French</option>
+          </select>
+        </label>
+        <button id="run">Build evidence dossier</button>
+      </form>
+      <p class="fine">MergeProof never turns an unmerged PR into an “accepted contribution”, and never claims payment or release inclusion without evidence.</p>
+    </section>
+
+    <section id="status" class="panel">Ready.</section>
+
+    <section id="result" class="hidden">
+      <section class="panel">
+        <div class="eyebrow">VERIFIED CONTRIBUTION</div>
+        <h2 id="title"></h2>
+        <div id="facts" class="facts"></div>
+      </section>
+
+      <section class="panel">
+        <div class="eyebrow">APERTUS / FALLBACK SYNTHESIS</div>
+        <h2 id="portfolio"></h2>
+        <p id="summary"></p>
+        <div id="claims"></div>
+      </section>
+
+      <section class="panel">
+        <div class="eyebrow">EVIDENCE</div>
+        <h2>Changed files</h2>
+        <div id="files" class="files"></div>
+        <h2>Linked issues</h2>
+        <div id="issues"></div>
+        <h2>Release references</h2>
+        <div id="releases"></div>
+      </section>
+    </section>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

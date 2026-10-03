@@ -1,3 +1,7 @@
+## This submission
+
+This repository was generated from the official Hack Apertus project template. The only retained challenge directory is track_2b/, which contains MergeProof. Judges can run make run from the repository root or from track_2b/.
+
 # Hack Apertus — project template
 
 Template repository for [Hack Apertus](https://hackapertus.ch/) submissions.
